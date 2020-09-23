@@ -24,6 +24,7 @@ public class TestVoidMethodClass {
     @Test
     public void testSize() {
         int expected = 3;
+        System.out.println("Person List size test running");
         Assert.assertEquals(expected, personList.size());
     }
 
@@ -31,6 +32,7 @@ public class TestVoidMethodClass {
     public void testAddPerson() {
         personList.add("Krishna");
         int expected = 4;
+        System.out.println("Add person test running");
         Assert.assertEquals(expected, personList.size());
     }
 
@@ -38,6 +40,7 @@ public class TestVoidMethodClass {
     public void testRemovePersonWorking() {
         personList.remove("Ankita");
         int expected = 2;
+        System.out.println("Remove existing person test running");
         Assert.assertEquals(expected, personList.size());
     }
 
@@ -45,6 +48,7 @@ public class TestVoidMethodClass {
     public void testRemoverPersonExpection() {
         personList.remove("Krishna");
         int expected = 2;
+        System.out.println("Remove non existing person test running");
         Assert.assertEquals(expected, personList.size());
     }
 
