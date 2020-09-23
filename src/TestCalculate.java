@@ -5,15 +5,15 @@ import org.junit.Test;
 
 public class TestCalculate {
     Calculate c = new Calculate();
-    @Before
-    public void beforeTest() {
-        System.out.println("This runs before every Test.");
-    }
-
-    @After
-    public void afterTest() {
-        System.out.println("This runs After every Test.");
-    }
+//    @Before
+//    public void beforeTest() {
+//        System.out.println("This runs before every Test.");
+//    }
+//
+//    @After
+//    public void afterTest() {
+//        System.out.println("This runs After every Test.");
+//    }
 
     @Test
     public void testSum() {
@@ -46,6 +46,7 @@ public class TestCalculate {
         float a = 5;
         float b =4;
         float expected = 20;
+        System.out.println("Normal Multiplication test running");
         Assert.assertEquals(expected,c.mul(a,b),0.0001);
     }
     @Test
@@ -53,7 +54,7 @@ public class TestCalculate {
         float a = 10000000;
         float b = 10000000;
         float actual = c.mul(a,b);
-        System.out.println(actual);
+        System.out.println("Large Number Multiplication test running");
         float expected = (float) 1.0E14;
         Assert.assertEquals(expected,actual,0.001);
 
@@ -63,6 +64,7 @@ public class TestCalculate {
         float a = 20;
         float b =4;
         float expected = 5;
+        System.out.println("Normal Division test running");
         Assert.assertEquals(expected,c.div(a,b),0.0001);
     }
 
@@ -71,6 +73,7 @@ public class TestCalculate {
         float a = 20;
         float b = 0;
         float expected = 5;
+        System.out.println("Zero Division test running");
         Assert.assertEquals(expected,c.div(a,b),0.0001);
     }
 }
