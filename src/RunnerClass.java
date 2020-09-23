@@ -4,7 +4,7 @@ import org.junit.runner.notification.Failure;
 
 public class RunnerClass {
     public static void main(String[] args) {
-        Result res = JUnitCore.runClasses(TestCalculate.class, TestVoidMethodClass.class);
+        Result res = JUnitCore.runClasses(TestSuite.class);
         for(Failure f: res.getFailures()){
             System.out.println(f.toString());
         }
